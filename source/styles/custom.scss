@@ -1,0 +1,379 @@
+:root {
+    --bs-dark-rgb: 16, 21, 76;
+    --bs-body-color-rgb: 16, 21, 76;
+    --animate-duration: 0.6s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+
+.text-black-50 {
+    color: rgb(55 84 109) !important;
+}
+
+.text-success {
+    color: hsl(166deg 63% 55%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f8fe;
+    transition: background-color 1000ms;
+}
+
+/* #wizard fieldset:not(:first-of-type) {
+  display: none;
+} */
+/* Larger browser support */
+#wizard fieldset + fieldset {
+    // display: none;
+}
+
+.btn:disabled {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.screen {
+    padding: 0 0;
+    min-height: 100vh;
+}
+
+.bgdblue {
+    background: #162d4e;
+    padding: 15px 0;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+section {
+    padding: 70px 0 0;
+}
+
+input,
+button {
+    outline: none;
+}
+
+#formf {
+    padding: 30px 0;
+}
+
+#formf h2 {
+    color: #999 !important;
+    text-align: center;
+}
+
+#formf .fa-check {
+    color: #33cc99;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+#formf p {
+    text-align: center;
+    line-height: 1.2;
+    color: #999;
+}
+
+.signup-box-headling {
+    width: 100%;
+    height: auto;
+    padding: 5px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.step {
+}
+
+.step img {
+    /* max-width: 128px */
+    /* display: block */
+    /* margin: 0 auto 20px */
+}
+
+.choice {
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    box-shadow: var(--shadow-2);
+    transition: all 0.25s;
+}
+
+.choice:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+circle {
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.choice:hover circle {
+    fill: var(--primary);
+}
+
+.footer {
+    padding: 10px 0;
+    color: #c1c1c1;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    background: #062440;
+}
+
+.footer a {
+    color: #c1c1c1;
+}
+
+#progress {
+    width: 100%;
+    background-color: hsl(213deg 85% 94%);
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    border-radius: 4px;
+}
+
+#progressbar {
+    width: 5%;
+    height: 4px;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+
+    /* color: transparent; */
+    font-family: "Roboto", sans-serif;
+    font-size: 0px;
+    font-weight: bold;
+    inset: 0px 92.3077% 0px 0px;
+    background-color: var(--accent);
+    border-radius: 3px;
+    transition: all 0.1s ease-in 0s;
+    transition-delay: 0.5s;
+    box-shadow: rgb(0 212 176 / 40%) 0px 2px 4px;
+}
+
+@media screen and (max-width: 480px) {
+    .choice {
+        max-width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
+
+.form-control {
+    border: 1px solid hsl(229deg 100% 92%);
+}
+
+progressbar::before {
+    content: "";
+    position: absolute;
+    inset: 0px 92.3077% 0px 0px;
+    background-color: hsl(168deg 76% 47%);
+    border-radius: 3px;
+    transition: all 0.1s ease-in 0s;
+    box-shadow: rgb(0 212 176 / 40%) 0px 2px 4px;
+}
+
+.vicopo {
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid hsl(229deg 100% 92%);
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#zip input:focus ~ ul.vicopo {
+    opacity: 0.98;
+}
+
+.vicopo-answer {
+    cursor: pointer;
+    padding: 0.35rem 0.75rem;
+}
+
+.vicopo-answer:hover {
+    background-color: var(--primary-light);
+}
+
+.cp {
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.bi {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.125em;
+    fill: currentcolor;
+}
+
+.animated {
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+    .animated {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .animated[class*="Out"] {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    from,
+    50%,
+    to {
+        border-color: var(--primary);
+    }
+
+    25%,
+    75% {
+        border-color: transparent;
+    }
+}
+
+.flash {
+    animation-name: flash;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 var(--primary);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px var(--primary);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 var(--primary);
+	}
+}
+.pulse {
+    animation-name: pulse;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.simulation:nth-child(1) {
+    transition-delay: 1s;
+}
+
+.simulation:nth-child(2) {
+    transition-delay: 2s;
+}
+
+.simulation:nth-child(3) {
+    transition-delay: 3s;
+}
+
+.simulation:nth-child(4) {
+    transition-delay: 4s;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+.arrows {
+    vertical-align: -2em;
+    width: 2.4em;
+    height: 2.2em
+}
